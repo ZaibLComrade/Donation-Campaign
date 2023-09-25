@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Root from './Root'
 import "./index.css"
+import CardDetails from './components/cardDetails'
 
 const router = createBrowserRouter([
 	{
@@ -19,6 +20,13 @@ const router = createBrowserRouter([
 				path: "/statistic",
 				element: <div>Statistic Path</div>
 			},
+			
+			{
+				path: "/:cardId",
+				loader: () => fetch("cardData.json"),
+				element: <CardDetails/>
+			},
+			
 		]
 	}
 ])

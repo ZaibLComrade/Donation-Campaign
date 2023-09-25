@@ -16,6 +16,6 @@ export default function Root() {
 			<Cards data={ cards }/>
 		</div>
 		}
-		<Outlet/>
+		<div className="container mx-auto"><Outlet/></div>
 	</div>
 }

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "https://i.ibb.co/CVhNJd6/health.png",
+    "image": "https://i.ibb.co/89pzqpq/health.jpg",
     "card_bg": "#0052FF26",
     "category_bg": "#0052FF33",
     "text_color": "#0052FF",
@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "image": "https://i.ibb.co/wsbd1cW/education.png",
+    "image": "https://i.ibb.co/ZKcr1YL/education.jpg",
     "card_bg": "#FF444A26",
     "category_bg": "#FF444A33",
     "text_color": "#FF444A",
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "image": "https://i.ibb.co/5nmLM7Y/clothing.png",
+    "image": "https://i.ibb.co/mGy08G1/clothing.jpg",
     "card_bg": "#79C23F26",
     "category_bg": "#79C23F33",
     "text_color": "#79C23F",
@@ -37,7 +37,7 @@
   },
   {
     "id": 4,
-    "image": "https://i.ibb.co/SR4XQT3/food.png",
+    "image": "https://i.ibb.co/PrF1B61/food.jpg",
     "card_bg": "#F8714726",
     "category_bg": "#F8714733",
     "text_color": "#F87147",
@@ -49,7 +49,7 @@
   },
   {
     "id": 5,
-    "image": "https://i.ibb.co/SR4XQT3/food.png",
+    "image": "https://i.ibb.co/PrF1B61/food.jpg",
     "card_bg": "#F8714726",
     "category_bg": "#F8714733",
     "text_color": "#F87147",
@@ -61,7 +61,7 @@
   },
   {
     "id": 6,
-    "image": "https://i.ibb.co/5nmLM7Y/clothing.png",
+    "image": "https://i.ibb.co/mGy08G1/clothing.jpg",
     "card_bg": "#79C23F26",
     "category_bg": "#79C23F33",
     "text_color": "#79C23F",
@@ -73,7 +73,7 @@
   },
   {
     "id": 7,
-    "image": "https://i.ibb.co/wsbd1cW/education.png",
+    "image": "https://i.ibb.co/ZKcr1YL/education.jpg",
     "card_bg": "#FF444A26",
     "category_bg": "#FF444A33",
     "text_color": "#FF444A",
@@ -86,7 +86,7 @@
   },
   {
     "id": 8,
-    "image": "https://i.ibb.co/CVhNJd6/health.png",
+	"image": "https://i.ibb.co/89pzqpq/health.jpg",
     "card_bg": "#0052FF26",
     "category_bg": "#0052FF33",
     "text_color": "#0052FF",
@@ -98,7 +98,7 @@
   },
   {
     "id": 9,
-    "image": "https://i.ibb.co/CVhNJd6/health.png",
+	"image": "https://i.ibb.co/89pzqpq/health.jpg",
     "card_bg": "#0052FF26",
     "category_bg": "#0052FF33",
     "text_color": "#0052FF",
@@ -110,7 +110,7 @@
   },
   {
     "id": 10,
-    "image": "https://i.ibb.co/wsbd1cW/education.png",
+    "image": "https://i.ibb.co/ZKcr1YL/education.jpg",
     "card_bg": "#FF444A26",
     "category_bg": "#FF444A33",
     "text_color": "#FF444A",
@@ -122,7 +122,7 @@
   },
   {
     "id": 11,
-    "image": "https://i.ibb.co/5nmLM7Y/clothing.png",
+    "image": "https://i.ibb.co/mGy08G1/clothing.jpg",
     "card_bg": "#79C23F26",
     "category_bg": "#79C23F33",
     "text_color": "#79C23F",
@@ -134,7 +134,7 @@
   },
   {
     "id": 12,
-    "image": "https://i.ibb.co/SR4XQT3/food.png",
+    "image": "https://i.ibb.co/PrF1B61/food.jpg",
     "card_bg": "#F8714726",
     "category_bg": "#F8714733",
     "text_color": "#F87147",

@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom"
 
 export default function Card({ card }) {
 	const { 
+		id,
 		title, 
 		image, 
 		text_color, 
@@ -10,7 +12,7 @@ export default function Card({ card }) {
 		category_bg,
 	} = card;
 
-	return <div className="rounded-lg">
+	return <Link to={`${id}`} className="rounded-lg">
 		<img src={ image } className="w-full rounded-t-lg object-fit" alt=""/>
 		<div className="p-4 rounded-b-lg" 
 			style={{ backgroundColor: card_bg, color: text_color }}>
@@ -18,7 +20,7 @@ export default function Card({ card }) {
 			style={{ backgroundColor: category_bg }}>{ category }</p>
 			<h3 className="mt-2 text-xl font-semibold">{ title }</h3>
 		</div>
-	</div>
+	</Link>
 }
 
 Card.propTypes = {
