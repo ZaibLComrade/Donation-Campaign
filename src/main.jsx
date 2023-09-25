@@ -2,16 +2,17 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Root from './Root'
-import './index.css'
+import "./index.css"
 
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Root/>,
+		loader: () => fetch("cardData.json"),
 		children: [
 			{
 				path: "/donation",
-				element: <div>Donation Path</div>
+				element: <div className="text-green-500">Donation Path</div>
 			},
 			
 			{
