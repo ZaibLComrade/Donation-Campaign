@@ -1,8 +1,15 @@
 import PropTypes from "prop-types";
 
 export default function Card({ card }) {
-	const { title, image, text_color, category, card_bg, category_bg } = card;
-	console.log(card_bg)
+	const { 
+		title, 
+		image, 
+		text_color, 
+		category, 
+		card_bg, 
+		category_bg,
+	} = card;
+
 	return <div className="rounded-lg">
 		<img src={ image } className="w-full rounded-t-lg object-fit" alt=""/>
 		<div className="p-4 rounded-b-lg" 

@@ -1,6 +1,6 @@
 import banner from "../assets/banner.jpeg";
 export default function Banner() {
-	return <section className="">
+	return <section>
 				<div className="relative top-0 z-0 h-full">
 					<img src={ banner } className="object-cover opacity-5 w-screen h-[600px]" alt=""/>
 					<div className="absolute w-full text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
