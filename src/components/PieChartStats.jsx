@@ -1,11 +1,5 @@
 import {PieChart, Pie, Cell} from "recharts"
-
-const data = [
-	{ name: 'Group A', value: 4 },
-	{ name: 'Group B', value: 3 },
-];
-
-const COLORS = ["#FF444A", "#00C49F"];
+import PropTypes from "prop-types"
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
@@ -20,8 +14,8 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
   );
 };
 
-export default function PieChartStats() {
-	return <PieChart width={500} height={500}>
+export default function PieChartStats({ data }) {
+	return <PieChart className="mx-auto" width={500} height={500}>
 		<Pie 
 			data={ data }
 			cx={"50%"}
@@ -33,8 +27,12 @@ export default function PieChartStats() {
 			dataKey="value"
 		>
 			{data.map((entry, index) =>
-				<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
+				<Cell key={`cell-${index}`} fill={entry.color}/>
 			)}
 		</Pie>
 	</PieChart>
+}
+
+PieChartStats.propTypes = {
+	data: PropTypes.array,
 }

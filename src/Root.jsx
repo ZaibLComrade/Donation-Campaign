@@ -34,6 +34,13 @@ export default function Root() {
 	const cards = useLoaderData();
 	const location = useLocation();
 	const isHome = location.pathname === "/";
+	const filterDonations = cards.filter(card => 
+		donations.includes(card.id)
+	)
+
+	// For statistics
+	const allCards = cards.length;
+	const selectedCards = filterDonations.length;
 	
 	const handleDonation = newDonation => {
 		if(donations.includes(newDonation)) {
@@ -56,7 +63,13 @@ export default function Root() {
 		</div>
 		}
 		<div className="container mx-auto">
-			<Outlet context={ {donations, handleDonation} }/>
+			<Outlet context={ {
+				cards,
+				filterDonations,
+				handleDonation,
+				allCards,
+				selectedCards,
+			} }/>
 		</div>
 	</div>
 }

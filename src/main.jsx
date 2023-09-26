@@ -17,7 +17,6 @@ const router = createBrowserRouter([
 		errorElement: <ErrorPage/>,
 		children: [
 			{
-				loader: () => fetch("cardData.json"),
 				path: "/donation",
 				element: <Donation/>
 			},
@@ -29,8 +28,7 @@ const router = createBrowserRouter([
 			
 			{
 				path: "/:cardId",
-				loader: () => fetch("cardData.json"),
-				element: <CardDetails randomThing={"Hello World"}/>
+				element: <CardDetails/>
 			},
 			
 		]

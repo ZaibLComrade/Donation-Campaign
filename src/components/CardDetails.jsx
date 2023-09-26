@@ -1,14 +1,12 @@
-import {useParams, useLoaderData, useOutletContext} from "react-router-dom"
+import {useParams, useOutletContext} from "react-router-dom"
 import { ToastContainer } from "react-toastify";
 
 export default function CardDetails() {
-	const cardData = useLoaderData();
+	const { cards, handleDonation } = useOutletContext();
 	const { cardId } = useParams();
 	const cardIdInt = parseInt(cardId)
-	const card = cardData.find(curr => curr.id === cardIdInt);
+	const card = cards.find(curr => curr.id === cardIdInt);
 	const { title, image, description, price, id } = card;
-	const { handleDonation } = useOutletContext();
-
 	
 	return <div>
 		<div className="relative mt-10 md:mt-[80px]">
