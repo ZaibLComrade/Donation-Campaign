@@ -1,6 +1,6 @@
 import PieChartStats from "./PieChartStats"
 
-export default function Statistic() {
+export default function Statistics() {
 	return <div className="flex items-center mt-[50px] justify-center h-screen">
 		<div className="w-max h-max">
 			<PieChartStats/>
