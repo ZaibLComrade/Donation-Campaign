@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Root from './Root'
 import "./index.css"
-import CardDetails from './components/cardDetails'
+import CardDetails from './components/CardDetails'
 import Donation from "./components/Donation"
 import ErrorPage from "./ErrorPage"
 import Statistics from './components/Statistics'

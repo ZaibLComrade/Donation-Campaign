@@ -21,10 +21,9 @@ export default function DonationCard({ card }) {
 			
 			<h4 className="mt-2 text-2xl font-semibold">{ title }</h4>
 			<p className="mt-2 font-semibold" style={ {color: text_color} }>${ price }</p>
-			<button to={`/${id}`} className="mt-5 px-4 py-[9px] rounded text-white text-lg font-semibold"
+			<Link to={ `/${id}` } className="mt-5 inline-block px-4 py-[9px] rounded text-white text-lg font-semibold"
 				style= { {backgroundColor: text_color} }
-			><Link to={ `/${id}` }>View Details</Link></button>
-				
+			>View Details</Link>	
 		</div>
 	</div>
 }

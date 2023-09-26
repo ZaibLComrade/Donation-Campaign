@@ -1,4 +1,5 @@
 import {useParams, useLoaderData, useOutletContext} from "react-router-dom"
+import { ToastContainer } from "react-toastify";
 
 export default function CardDetails() {
 	const cardData = useLoaderData();
@@ -7,6 +8,7 @@ export default function CardDetails() {
 	const card = cardData.find(curr => curr.id === cardIdInt);
 	const { title, image, description, price, id } = card;
 	const { handleDonation } = useOutletContext();
+
 	
 	return <div>
 		<div className="relative mt-10 md:mt-[80px]">
@@ -20,5 +22,6 @@ export default function CardDetails() {
 			<h2 className="md:text-[40px] text-3xl font-bold">{ title }</h2>
 			<p className="opacity-70">{ description }</p>
 		</div>
+		<ToastContainer/>
 	</div>
 }
