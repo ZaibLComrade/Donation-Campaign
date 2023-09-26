@@ -6,6 +6,7 @@ import "./index.css"
 import CardDetails from './components/cardDetails'
 import Donation from "./components/Donation"
 import ErrorPage from "./ErrorPage"
+import Statistic from './components/Statistic'
 
 const router = createBrowserRouter([
 	
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
 			
 			{
 				path: "/statistic",
-				element: <div>Statistic Path</div>
+				element: <Statistic/>
 			},
 			
 			{

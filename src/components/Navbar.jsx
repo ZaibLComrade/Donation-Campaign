@@ -3,7 +3,8 @@ import { NavLink, useLocation } from "react-router-dom";
 
 export default function Navbar() {
 	const isHome = useLocation().pathname === '/';
-	return <div className={`container ${isHome && "absolute left-1/2 -translate-x-1/2 top-0 "} z-10 flex flex-col items-center justify-between pt-12 mx-auto md:flex-row gap-6`}>
+	const isStaitstic = useLocation().pathname === "/statistic";
+	return <div className={`container ${(isHome || isStaitstic) && "absolute left-1/2 -translate-x-1/2 top-0 "} z-10 flex flex-col items-center justify-between pt-12 mx-auto md:flex-row gap-6`}>
 			<div>
 				<img src={ logo } alt=""/>
 			</div>
@@ -14,6 +15,5 @@ export default function Navbar() {
 					<NavLink to="/statistic">Statistic</NavLink>
 				</nav>
 			</div>
-		</div>
-
+	</div>
 }
