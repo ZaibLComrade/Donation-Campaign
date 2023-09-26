@@ -4,8 +4,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Root from './Root'
 import "./index.css"
 import CardDetails from './components/cardDetails'
+import Donation from "./components/Donation"
 
 const router = createBrowserRouter([
+	
 	{
 		path: "/",
 		element: <Root/>,
@@ -13,7 +15,7 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: "/donation",
-				element: <div className="text-green-500">Donation Path</div>
+				element: <Donation/>
 			},
 			
 			{
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
 			{
 				path: "/:cardId",
 				loader: () => fetch("cardData.json"),
-				element: <CardDetails/>
+				element: <CardDetails randomThing={"Hello World"}/>
 			},
 			
 		]
