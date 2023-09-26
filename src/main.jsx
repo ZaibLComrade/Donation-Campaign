@@ -5,6 +5,7 @@ import Root from './Root'
 import "./index.css"
 import CardDetails from './components/cardDetails'
 import Donation from "./components/Donation"
+import ErrorPage from "./ErrorPage"
 
 const router = createBrowserRouter([
 	
@@ -12,8 +13,10 @@ const router = createBrowserRouter([
 		path: "/",
 		element: <Root/>,
 		loader: () => fetch("cardData.json"),
+		errorElement: <ErrorPage/>,
 		children: [
 			{
+				loader: () => fetch("cardData.json"),
 				path: "/donation",
 				element: <Donation/>
 			},

@@ -11,7 +11,7 @@ export default function Root() {
 	const isHome = location.pathname === "/";
 	
 	const handleDonation = newDonation => {
-		console.log("Button works")
+		setDonations([...donations, newDonation]);
 	}
 	
 	
