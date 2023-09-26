@@ -4,9 +4,9 @@ export default function DonationCard({ card }) {
 	const { title, image, card_bg, category, category_bg, text_color, price } = card
 	return <div className="md:flex">
 		<div className="rounded-l-lg shrink-0">
-			<img className="w-[220px] rounded-l-lg h-full object-cover" src={ image } alt=""/>
+			<img className="md:w-[220px] rounded-t-lg md:rounded-l-lg md:rounded-r-none h-full object-cover" src={ image } alt=""/>
 		</div>
-		<div className="w-full py-6 pl-6 rounded-r-lg" 
+		<div className="w-full py-6 pl-6 rounded-b-lg md:rounded-l-none md:rounded-r-lg" 
 			style={ {
 				backgroundColor: card_bg,
 			} }>

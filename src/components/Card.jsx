@@ -13,7 +13,7 @@ export default function Card({ card }) {
 	} = card;
 
 	return <Link to={`${id}`} className="rounded-lg">
-		<img src={ image } className="object-cover w-full rounded-t-lg h-[194px]" alt=""/>
+		<img src={ image } className="object-cover w-full rounded-t-lg md:h-[194px]" alt=""/>
 		<div className="p-4 rounded-b-lg" 
 			style={{ backgroundColor: card_bg, color: text_color }}>
 			<p className="text-sm font-medium w-max py-1 px-[10px] rounded"
