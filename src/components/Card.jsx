@@ -12,7 +12,7 @@ export default function Card({ card }) {
 		category_bg,
 	} = card;
 
-	return <Link to={`${id}`} className="rounded-lg">
+	return <Link to={`/details/${id}`} className="rounded-lg">
 		<img src={ image } className="object-cover w-full rounded-t-lg md:h-[194px]" alt=""/>
 		<div className="p-4 rounded-b-lg" 
 			style={{ backgroundColor: card_bg, color: text_color }}>

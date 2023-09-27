@@ -7,18 +7,23 @@ import CardDetails from './components/CardDetails'
 import Donation from "./components/Donation"
 import ErrorPage from "./ErrorPage"
 import Statistics from './components/Statistics'
+import NotFound from './components/NotFound'
 
 const router = createBrowserRouter([
 	
 	{
-		path:"*",
-		element: <div>404 Page not found</div>
+		path: "*",
+		element: <NotFound/>
 	},
 	
 	{
 		path: "/",
 		element: <Root/>,
-		loader: () => fetch("cardData.json"),
+		loader: async () => {
+			const response = await fetch("cardData.json");
+			const resource = await response.json();
+			return resource;
+		},
 		errorElement: <ErrorPage/>,
 		children: [
 			{
@@ -32,10 +37,16 @@ const router = createBrowserRouter([
 			},
 			
 			{
-				path: "/:cardId",
-				element: <CardDetails/>
+				path: "/details/:cardId",
+				element: <CardDetails/>,
+				loader: async ({ params }) => {
+					const response = await fetch("cardData.json");
+					const resource = await response.json();
+					const cardId = parseInt(params.cardId);
+					const data = resource.find(dat => dat.id === cardId)
+					return data;
+				},
 			},
-			
 		]
 	}
 ])

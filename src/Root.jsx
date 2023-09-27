@@ -70,7 +70,6 @@ export default function Root() {
 		}
 		<div className="container mx-auto">
 			<Outlet context={ {
-				cards,
 				filterDonations,
 				handleDonation,
 				allCards,
