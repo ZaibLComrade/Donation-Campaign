@@ -1,4 +1,4 @@
-import { useState, } from 'react'
+import { useEffect, useState, } from 'react'
 import Banner from "./components/Banner";
 import { Outlet, useLocation, useLoaderData } from "react-router-dom";
 import Cards from "./components/Cards";
@@ -30,6 +30,7 @@ const notifyAlreadyAdded = () => toast.error('Donation already made', {
 });
 
 export default function Root() {
+	const [searchValue, setSearchValue] = useState("")
 	const [donations, setDonations] = useState(getInitDonations());
 	const cards = useLoaderData();
 	const location = useLocation();
@@ -53,13 +54,18 @@ export default function Root() {
 		notifyAdded()
 	}
 	
+	const handleSubmit = e => {
+		e.preventDefault();
+		setSearchValue(e.target.search.value.toLowerCase());
+	}
+	
 	return <div className="px-4 mb-12 lg:px-0">
 		<Navbar/>
 		
 		{isHome && 
 		<div>
-			<Banner/>
-			<Cards data={ cards }/>
+			<Banner handleSubmit={ handleSubmit }/>
+			<Cards data={ cards } searchValue = { searchValue }/>
 		</div>
 		}
 		<div className="container mx-auto">
