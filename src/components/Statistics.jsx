@@ -8,11 +8,11 @@ export default function Statistics() {
 		{ id: 2, name: 'Your Donation', value: selectedCards, color:"#00C49F"},
 	];
 	
-	return <div className="flex items-center mt-[50px] justify-center h-screen">
-		<div className="w-max h-max">
-			<PieChartStats data={ data }/>
+	return <div>
+		<div className="h-[250px] md:h-[400px] lg:h-[500px] mt-10">
+				<PieChartStats data={ data }/>
 			
-			<div className="flex mx-auto gap-14 w-max mt-[70px]">
+			<div className="md:flex space-y-2 md:space-y-0 mx-auto gap-14 w-max mt-10 md:mt-[70px]">
 				{
 					data.map(fracs => <div key={fracs.id} className="flex items-center gap-4">
 						<p>{ fracs.name }</p>

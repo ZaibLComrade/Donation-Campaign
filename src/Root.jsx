@@ -1,4 +1,4 @@
-import { useEffect, useState, } from 'react'
+import { useState, } from 'react'
 import Banner from "./components/Banner";
 import { Outlet, useLocation, useLoaderData } from "react-router-dom";
 import Cards from "./components/Cards";

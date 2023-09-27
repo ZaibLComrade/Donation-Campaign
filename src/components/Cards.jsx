@@ -8,7 +8,7 @@ export default function Cards({ data, searchValue }) {
 	return <div>
 		{
 		filteredData.length ?
-		<div className="container mx-auto grid gap-6 md:grid-cols-2 grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 mt-[100px]">
+			<div className="container mx-auto mt-8 grid gap-6 md:grid-cols-2 grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 md:mt-[100px]">
 			{
 				filteredData.map(card => 
 					<Card key={ card.id } card={ card }/>
@@ -16,7 +16,7 @@ export default function Cards({ data, searchValue }) {
 			}
 		</div>
 		
-		:<div className="mx-auto mt-20 text-5xl font-bold opacity-30 w-max">{`"${searchValue}"`} category not found</div>
+		:<div className="mx-auto mt-20 text-xl text-5xl font-bold text-center md:text-3xl opacity-30">{`"${searchValue}"`} category not found</div>
 		}
 	</div> 
 }
