@@ -11,6 +11,11 @@ import Statistics from './components/Statistics'
 const router = createBrowserRouter([
 	
 	{
+		path:"*",
+		element: <div>404 Page not found</div>
+	},
+	
+	{
 		path: "/",
 		element: <Root/>,
 		loader: () => fetch("cardData.json"),
